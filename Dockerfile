@@ -1,5 +1,5 @@
 # python image to use
-FROM python:3
+FROM python:3.9-alpine3.13
 
 # current dir to put our app to
 WORKDIR /app
