@@ -1,0 +1,11 @@
+version: "3.9" # verison of docker-compose
+services:
+  app:
+    build: 
+      context: . # build using current docker file
+    ports:
+      - 8000:8000 # port mapping
+    volumes:
+      - ./app:/app # map everything in app dir into container
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
