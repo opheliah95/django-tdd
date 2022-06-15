@@ -15,10 +15,11 @@ COPY ./app /app
 WORKDIR /app
 
 # install requirements
-RUN python -m venv /venv && \
+RUN pip install virtualenv && \
+    python -m venv /venv && \
     source /venv/bin/activate && \
     pip install --upgrade pip && \
-    pip install --no-cache-dir -r /tmp/requirements.txt && \
+    pip install --no-cache-dir -r /tmp/requirements.txt
     rm -rf /tmp/requirements.txt
 
 # add django user command
