@@ -1,0 +1,13 @@
+# ignore files required by git
+.git
+.gitignore
+
+# pycache files that created automatelly
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycahce__/
+app/*/*/*/__pycahce__/
+
+# ignore files that container created itself
+venv/
+.env
